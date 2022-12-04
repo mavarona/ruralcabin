@@ -1,12 +1,6 @@
 import Title from '@components/common/title'
-import { useState } from 'react'
 
-import { addLocale } from 'primereact/api'
-
-import { getUnique, 
-         getDataDropdown, 
-         getLastMidnight, 
-         getNextMidnight } from '@lib/utils'
+import { getUnique } from '@lib/utils'
 
 export default function BookingFilter({cabins, styles, message, locale, onChange, onClick}){
 
