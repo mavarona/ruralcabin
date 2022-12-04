@@ -28,15 +28,13 @@
     justify-content: center;
     font-size: 1.3rem;
     font-weight: bold;
+    padding-top: 0.8rem;
 }
 
 .titleProvisionalLink {
-    display: flex;
-    justify-content: center;
     padding-left: 0.7rem;
-    font-size: 1.3rem;
-    font-weight: bold;
     text-decoration: underline;
+    font-size: 1.5rem;
 }
 
 .title {
