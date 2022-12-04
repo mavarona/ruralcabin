@@ -30,6 +30,15 @@
     font-weight: bold;
 }
 
+.titleProvisionalLink {
+    display: flex;
+    justify-content: center;
+    padding-left: 0.7rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .title {
     margin: 0;
     color: var(--primaryColor);

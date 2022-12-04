@@ -76,22 +76,6 @@ export default function Booking({ bookings}) {
                         onChange={onChange}
                         onClick={onClick}
                 />
-                <Dialog header={t.attention}
-                        visible={displayPrivacyPolicy} 
-                        style={{ width: '50vw' }} 
-                        modal 
-                        onHide={() => setDisplayPrivacyPolicy(false)}>
-                        {t.msg_filter_date}
-                </Dialog>
-                {cabinsAvailable && cabinsAvailable.length === 0  && 
-                    <MessageSearch style={styles.emptySearch} message={t.not_cabins_available} />
-                }
-                <CabinListAvailable cabins={cabinsAvailable}
-                        styles={styles}
-                        message={messageList}
-                        filter={filter}
-                        onClick={()=>setDisplayPrivacyPolicy(true)}
-                />
             </div>
         </>
     )
