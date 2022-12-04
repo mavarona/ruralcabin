@@ -1,0 +1,18 @@
+.dialogP {
+    margin-bottom: 0.7rem !important;
+  }
+
+.dialogSpanBold {
+    font-weight: bold;
+  }
+
+.dialogLi {
+    list-style-type: disc;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.dialogA {
+    color: darkblue;
+    text-decoration: underline;
+}

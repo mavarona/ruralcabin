@@ -1,0 +1,168 @@
+.container {
+    min-height: 95vh;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titleCard {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.fontbold {
+    font-weight: bold;
+}
+
+.emptySearch {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    padding: 1rem;
+    letter-spacing: 3px;
+}
+
+.title {
+    margin: 0;
+    color: var(--primaryColor);
+    line-height: 1.15;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* roomlist */
+
+.infolist {
+    padding: 2rem 0;
+}
+
+.infolistCenter {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+}
+
+.buttonContainer {
+    background: #3f2a03;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    width: 85%;
+
+}
+
+.anchorButton {
+    color: white
+}
+
+.anchorButton:hover {
+    cursor: pointer;
+}
+
+/* roomlist */
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imgContainerImg {
+    width: 100%;
+    display: block;
+    margin-top: 0.8rem!important;
+    transition: var(--mainTransition);
+}
+
+.imgContainerDetail {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imgContainerImgDetail {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+}
+
+.cabinLink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 0.3s linear;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: var(--mainWhite);
+    background: var(--mainBlack);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--mainBlack);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cabinInfo {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Tablet landscape */
+@media only screen and (max-width: 1024px) {
+    .infolistCenter {
+        width: 95vw;
+        max-width: 1170px;
+    }
+    .filterForm {
+        width: 95vw;
+        max-width: 1170px;
+    } 
+    
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+
+    .title {
+        color: var(--primaryColor);
+        line-height: 1;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .infolistCenter {
+        width: 90vw;
+    } 
+    
+}
+
+/* Mobile */
+@media only screen and (max-width: 468px) {
+
+  .title {
+    color: var(--primaryColor);
+    line-height: 1;
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+}

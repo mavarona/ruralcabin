@@ -1,0 +1,454 @@
+.container {
+    min-height: 95vh;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filterContainer {
+    padding: 1rem 0;
+}
+
+.datepicker {
+    width: 100%;
+    padding: 0.3rem;
+}
+
+.emptySearch {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    padding: 1rem;
+    letter-spacing: 3px;
+}
+
+.titleProvisional {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.title {
+    margin: 0;
+    color: var(--primaryColor);
+    line-height: 1.15;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formGroup {
+    text-transform: capitalize;
+}
+
+.filterForm {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+}
+
+.buttonFilter {
+    height: 60px;
+    margin-top: 5rem;
+}
+
+.formGroup {
+    text-transform: capitalize;
+}
+
+.formGroupLabel {
+    display: block;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+.formControl {
+    width: 100%;
+    background: transparent;
+    font-size: 1rem;
+    border: 1px solid black;
+}
+
+.formInputSpan {
+    width: 95%;
+    margin-left: 0.5rem;
+    margin-top: 1.3rem;
+  }
+
+.formButtonSpan {
+    width: 100%;
+    margin-left: 0.5rem;
+}
+
+.formInputControl {
+    width: 100%;
+}
+
+.formTextareaControl {
+    width: 100%;
+}
+
+
+.formButton {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 10px;
+    cursor:pointer;
+    height: 3.5rem;
+    margin-top: 6rem;
+}
+
+.formButtonBooking {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 10px;
+    cursor:pointer;
+  }
+
+.formButtonDisabled {
+    background-color: var(--backgroundDisabled);
+    border: 1px solid var(--borderDisabled);
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 10px;
+    cursor: default;
+    color: var(--colorDisabled);
+    pointer-events:none;
+}
+
+.divPrivatePolicy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formCheckboxSpan {
+    width: 95%;
+    margin-left: 0.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+}
+
+/* roomlist */
+
+.cabinslist {
+    padding: 2rem 0;
+}
+
+.cabinslistCenter {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+}
+
+/* roomlist */
+
+/* Cabin Booking */
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imgContainerNotHover {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imgContainerImg {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+}
+
+.imgContainerDetail {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imgContainerImgDetail {
+    width: 100%;
+    display: block;
+    transition: var(--mainTransition);
+}
+
+.imgContainer:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.imgContainerImg:hover {
+    opacity: 0.3;
+}
+
+.imgContainer:hover .priceTop {
+    opacity: 0;
+}
+
+.priceTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--mainWhite);
+    padding: 0.3rem 0.6rem 0.5rem;
+    border-bottom-right-radius: 1rem;
+    font-size: 0.5rem;
+    text-align: center;
+    transition: var(--mainTransition);
+}
+
+.priceTop h6 {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+.cabinLink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0);
+    transition: all 0.3s linear;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: var(--mainWhite);
+    background: var(--mainBlack);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--mainBlack);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cabinLink:hover {
+    background: var(--secondaryColor);
+    color: var(--mainWhite);
+}
+
+.imgContainer:hover .cabinLink {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.cabinInfo {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* Cabin Booking */
+
+.btnPrimary {
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: var(--mainBlack);
+    background: var(--terciaryColor);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--terciaryColor);
+    transition: var(--mainTransition);
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btnPrimary:hover {
+    background: transparent;
+    color: var(--terciaryColor);
+}
+
+.formBooking {
+    border: 1px solid var(--secondaryColor);
+    width: 600px;
+    height:530px;
+}
+
+.formBookingHeader {
+    background-color: #6366F1;
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    height: 50px;
+}
+
+.formBookingTotal {
+    background-color: #65a365;
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    height: 50px;
+    margin-bottom: 0.2rem;
+}
+
+.formBookingMessage {
+    margin-bottom: 0.2rem;
+    margin-top: 0.5rem;
+    min-height: 60px;
+    font-size: 1rem;
+}
+
+.formBookingBody {
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 450px;
+    text-align: center;
+}
+
+.formInput {
+    width: 95%;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--mainWhite);
+
+  }
+
+.formTextArea {
+    width: 95%;
+    padding: 0.3rem;
+    height: 190px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--mainWhite);
+}
+
+/* Tablet landscape */
+@media only screen and (max-width: 1024px) {
+
+    .formBooking {
+        width: 500px;
+        height:510px;
+    }
+
+    .filterForm {
+        width: 95vw;
+        max-width: 1170px;
+    } 
+
+    .formBookingHeader {
+        height: 40px;
+    }
+
+    .formBookingTotal {
+        height: 40px;
+    }
+
+    .formBookingBody {
+        height: 380px;
+    }
+
+    .formTextArea {
+        height: 120px;
+    }
+
+}
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+
+    .title {
+        color: var(--primaryColor);
+        line-height: 1;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .filterForm {
+        width: 70vw;
+    }
+
+    .formButton {
+        height: 1.5rem;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+
+    .cabinslistCenter {
+        width: 90vw;
+    } 
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 468px) {
+
+    .formBooking {
+        border: 1px solid var(--primaryColor);
+        width: 320px;
+        height:500;
+    }
+
+    .title {
+        color: var(--primaryColor);
+        line-height: 1;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .formButton {
+        height: 2rem;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    .formButtonBooking {
+        font-size: 1rem;
+    }
+
+    .formBookingHeader {
+        font-size: 0.9rem;
+        height: 30px;
+    }
+
+    .formBookingTotal {
+        font-size: 0.9rem;
+        height: 30px;   
+    }
+
+    .formBookingBody {
+        width: 100%;
+        height: 305px;
+    }
+
+    .formTextArea {
+        height: 80px;
+    }
+  
+    .formButtonDisabled {
+      font-size: 1rem;
+    }
+
+    .buttonFilter {
+        height: 60px;
+        margin-top: 0;
+    }
+}

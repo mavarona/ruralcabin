@@ -1,0 +1,39 @@
+{
+  "name": "naturcabin",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "@sendgrid/mail": "^7.7.0",
+    "@stripe/stripe-js": "^1.31.0",
+    "axios": "^0.27.2",
+    "dotenv": "^10.0.0",
+    "luxon": "^2.3.0",
+    "mongodb": "^4.2.2",
+    "mongoose": "^6.2.2",
+    "next": "^12.1.0",
+    "next-remove-imports": "^1.0.6",
+    "nodemailer": "^6.7.2",
+    "primeflex": "3.1.0",
+    "primeicons": "5.0.0",
+    "primereact": "^7.0.0",
+    "react": "17.0.2",
+    "react-datepicker": "^4.6.0",
+    "react-dom": "17.0.2",
+    "react-transition-group": "^4.4.1",
+    "sharp": "^0.30.6",
+    "swr": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "8.5.0",
+    "eslint-config-next": "12.0.7"
+  }
+}

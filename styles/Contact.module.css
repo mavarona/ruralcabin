@@ -1,0 +1,289 @@
+.container {
+    min-height: 95vh;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+    
+  .title {
+    margin: 0;
+    color: var(--primaryColor);
+    line-height: 1.15;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .iframeMap {
+    width: 600px;
+    height: 400px;
+  }
+
+  .divInfo {
+    margin-bottom: 0.2rem;
+  }
+
+  .info {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .logo_location {
+    color: var(--primaryColor);
+    padding-top: 0.7rem;
+  }
+
+  .logo_phone {
+    color: var(--primaryColor);
+    padding-top: 0.7rem;
+  }
+
+  .logo_phone:hover {
+    color: var(--terciaryColor);
+    cursor:pointer;
+  }
+
+  .logo_whatsapp {
+    background-color: var(--whatsappColor);
+    color: var(--mainWhite);
+    padding: 0.2rem;
+    border-radius:10px;
+  }
+
+  .info_location {
+    margin-top: 1.5rem;
+    color: var(--primaryColor);
+    font-size: 1.5rem;
+    padding-left: 0.7rem;
+  }
+
+  .info_location:hover {
+    color: var(--terciaryColor);
+    cursor:pointer;
+  }
+
+  .formMail {
+      border: 1px solid var(--secondaryColor);
+      width: 600px;
+      height:550px;
+  }
+
+  .formMailHeader {
+      background-color: #6366F1;
+      color: var(--mainWhite);
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 0.5rem;
+      height: 50px;
+  }
+
+  .formMailBody {
+    background-color: var(--secondaryColor);
+    width: 100%;
+    height: 450px;
+    text-align: center;
+  }
+
+  .formInput {
+    width: 95%;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--mainWhite);
+  }
+
+  .formInputSpan {
+    width: 95%;
+    margin-left: 0.5rem;
+    margin-top: 1.3rem;
+  }
+
+  .formCheckboxSpan {
+    width: 95%;
+    margin-left: 0.5rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .formButtonSpan {
+    width: 100%;
+    margin-left: 0.5rem;
+  }
+
+  .formInputControl {
+    width: 100%;
+  }
+
+  .formTextareaControl {
+    width: 100%;
+  }
+
+  .formTextArea {
+    width: 95%;
+    padding: 0.3rem;
+    height: 190px;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--mainWhite);
+  }
+
+  .formButton {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 10px;
+    cursor:pointer;
+  }
+
+  .formButton:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+  }
+
+  .formButtonDisabled {
+    background-color: var(--backgroundDisabled);
+    border: 1px solid var(--borderDisabled);
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    width: 95%;
+    border-radius: 10px;
+    cursor: default;
+    color: var(--colorDisabled);
+    pointer-events:none;
+  }
+
+  .divPrivatePolicy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+/* Tablet landscape */
+@media only screen and (max-width: 1024px) {
+  .iframeMap {
+    width: 500px;
+    height: 320px;
+  }
+
+  .formMail {
+    width: 500px;
+    height:550px;
+  }
+
+  .formMailHeader {
+    height: 40px;
+  }
+
+  .formMailBody {
+    height: 380px;
+  }
+
+  .formTextArea {
+    height: 120px;
+  }
+
+  .divInfo {
+    margin-bottom: 0.5rem;
+  }
+
+}
+
+
+/* Tablet */
+@media only screen and (max-width: 768px) {
+    .container {
+        min-height: 95vh;
+        padding: 1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+        
+    .title {
+        margin: 1rem;
+        color: var(--primaryColor);
+        line-height: 1;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .divInfo {
+      margin-bottom: 0.5rem;
+    }
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 468px) {
+  .container {
+      min-height: 95vh;
+      padding: 1rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+  }
+      
+  .title {
+      margin: 1rem;
+      color: var(--primaryColor);
+      line-height: 1;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  .iframeMap {
+      width: 320px;
+      height: 250px;
+  }
+
+  .info_location {
+      margin-top: 1rem;
+      color: var(--primaryColor);
+      font-size: 1rem;
+      padding-left: 0.7rem;
+  }
+
+  .formMail {
+      border: 1px solid var(--primaryColor);
+      width: 320px;
+      height:550px;
+  }
+
+  .formMailHeader {
+      font-size: 1rem;
+      padding: 0.3rem;
+      height: 30px;
+  }
+
+  .formMailBody {
+    width: 100%;
+    height: 305px;
+  }
+
+  .formTextArea {
+      height: 70px;
+  }
+
+  .formButton {
+      font-size: 1rem;
+  }
+
+  .formButtonDisabled {
+    font-size: 1rem;
+  }
+
+  .divInfo {
+    margin-bottom: 0.7rem;
+  }
+
+}
+  

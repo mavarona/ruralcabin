@@ -1,0 +1,234 @@
+.container {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+/* Hero */
+
+.defaultHero {
+    min-height: calc(100vh);
+    background: url("/cabinmain.jpeg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-center;
+    min-width: calc(100vw);
+}
+
+/* End of Hero */
+
+
+/* Banner */
+
+.banner {
+  display: inline-block;
+  background: var(--backgroundBanner);
+  color:var(--mainWhite);
+  padding: 2rem 1rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+}
+
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: var(--secondaryColor);
+  margin: 1.7rem auto;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.banner a {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+}
+
+.banner a:hover {
+  padding: 0.7rem;
+  font-size: 1.2rem;
+  background-color: var(--secondaryColor);
+}
+
+/* End of Banner */
+
+/* Title */
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  background-color: transparent;
+}
+
+.sectionTitle h4 {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  color: #1b1917;
+}
+
+.sectionTitle div {
+  margin: 0 auto;
+  background: var(--backgroundBanner);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* end of Title */
+
+/* services */
+
+.containerServices {
+  display: grid;
+}
+
+.services {
+  padding: 5rem 0;
+}
+
+.services {
+  background: var(--backgroundBanner);
+  text-align: center;
+}
+
+.servicesCenter {
+  margin: 0 auto;
+  display: grid;
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  align-items: baseline;
+  background-color: rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.servicesCenter i {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: transparent;
+}
+
+.servicesCenter span{
+  padding-left: 0.7rem;
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  background: transparent;
+}
+
+.servicesCenter h6{
+  padding-left: 0.7rem;
+}
+
+.serviceItem {
+  display: flex;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 0.7rem;
+  background: transparent;
+}
+
+.service span {
+  display: inline-block;
+  color: var(--mainWhite);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.7rem;
+}
+
+.services h6 {
+  letter-spacing: 3px;
+}
+
+.services p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*end of services */
+
+
+/* Tablet landscape */
+@media only screen and (max-width: 1024px) {
+
+  /* Banner */
+
+  .banner {
+    padding: 2rem 6rem;
+    margin-bottom: 1rem;
+  }
+  .banner h1 {
+      font-size: 4rem;
+  }
+
+  /* End of Banner */
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .containerServices {
+    grid-template-columns: 1fr;
+  }
+
+  /* Banner */
+
+    .banner {
+      padding: 2rem 6rem;
+      margin-bottom: 0.5rem;
+    }
+    .banner h1 {
+        font-size: 4rem;
+    }
+  
+  /* End of Banner */
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 468px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .servicesCenter {
+    grid-template-columns: 1fr;
+  }
+
+  .containerServices {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  /* Banner */
+
+  .banner{ 
+      padding: 2rem 3rem;
+  }
+  .banner h1 {
+      font-size: 3rem;
+  }
+  
+  /* End of Banner */
+
+}

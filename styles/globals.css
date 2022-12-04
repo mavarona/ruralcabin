@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: #3f2a03;
+  --secondaryColor:#d69d5a;
+  --terciaryColor: rgb(19, 95, 3);
+  --whatsappColor:#25d366;
+  --mainWhite: #ffffff;
+  --mainBlack: #222;
+  --backgroundDisabled: #dddddd;
+  --borderDisabled: #999999;
+  --colorDisabled: #666666;
+  --backgroundBanner: rgba(0, 0, 0, 0.7);
+  --mainTransition: all 0.3s linear;
+}
+
+html,body, body * { 
+  font-family: 'Open Sans', sans-serif; 
+  color:inherit;
+  background-color:inherit;
+ font-size: 1rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+}
+button {
+background: transparent;
+border: none;
+cursor: pointer;
+padding: 0;
+}
+
+button:hover,
+button:focus {
+  background:transparent;
+}
+
+button:focus {
+  outline: none;
+
+}

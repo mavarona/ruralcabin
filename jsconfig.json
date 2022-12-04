@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@styles/*": ["styles/*"],
+            "@components/*": ["components/*"],
+            "@locales/*": ["locales/*"],
+            "@lib/*": ["lib/*"],
+            "@hooks/*": ["hooks/*"],
+            "@controllers/*": ["controllers/*"],
+            "@config/*": ["config/*"],
+            "@models/*": ["models/*"],
+            "@layouts/*": ["layouts/*"],
+            "@api/*": ["api/*"],
+            "@context/*": ["context/*"]
+        }
+    }
+}

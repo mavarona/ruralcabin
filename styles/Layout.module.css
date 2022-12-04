@@ -1,0 +1,172 @@
+.header{
+    background-color: var(--primaryColor);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 35px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--mainWhite);
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navitem {
+    margin-left: 1.5rem;
+}
+
+.navlink{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--mainWhite);
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    display: flex;
+}
+
+.navlink:hover{
+    color:var(--secondaryColor);
+}
+
+.navlogo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--terciaryColor);
+}
+
+.navlogoMain {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--secondaryColor);
+    background-color:var(--secondaryColor);
+    padding: 3px;
+}
+
+.call {
+    color: var(--secondaryColor);
+    margin-right: 0.3rem;
+}
+
+.specialpack {
+    color: var(--secondaryColor);
+    margin-right: 0.3rem;
+}
+
+.info {
+    color: var(--secondaryColor);
+    margin-right: 0.3rem;
+}
+
+.cabins {
+    color: var(--secondaryColor);
+}
+
+.contact {
+    color: var(--secondaryColor);
+}
+
+.booking {
+    color: var(--secondaryColor);
+}
+
+.login {
+    color: var(--secondaryColor);
+}
+
+.whatsapp {
+    background-color: var(--whatsappColor);
+    color: var(--mainWhite);
+    padding: 0.2rem;
+    border-radius:10px;
+    margin-right: 0.3rem;
+}
+
+.footerApp {
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0.3rem;
+}
+
+.footerApp div {
+    padding-right: 0.1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }
+    .navmenu {
+        position: fixed;
+        left: -100%;
+        top: 4.5rem;
+        flex-direction: column;
+        background-color: var(--primaryColor);
+        width: 98%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 999;
+    }
+
+    .navmenu.active {
+        left: 0.3rem;
+    }
+
+    .navitem {
+        margin: 0.3rem 0;
+        padding-left: 1.5rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .navitem_divider {
+        border-top: 1px solid #d69d5a;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /*.hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }*/
+}

@@ -1,0 +1,27 @@
+# Sacar a components elements of pages (OK)
+
+# Send email from nextjs (OK)
+https://medium.com/nerd-for-tech/coding-a-contact-form-with-next-js-and-nodemailer-d3a8dc6cd645
+
+# addedd .env con el correo de gmail destinatario (habilitar permisos) (OK)
+
+# Added react toast notofications to send the email has been sended (OK)
+Añadir la lógica para intentar enviar correos electronicos (OK)
+
+#TEXT AREA RICH TEXT form body mail (OK) format date sended
+
+# Estudiar meter el captcha
+# https://prateeksurana.me/blog/integrating-recaptcha-with-next/ (OK)
+
+
+# Estudiar meter el termino y condiciones
+
+# Despliegue en vercel (ok)
+
+# Conexión mongodb atlas (ok)
+
+# Testear con Firebase authentication en Google y Facebook
+
+# Crear la pagina de reservas basado en un template de demo como la del video
+
+# Estudiar el tema de stripe para pasarela de pago
