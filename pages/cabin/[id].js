@@ -81,6 +81,7 @@ export default function CabinDetails({info}) {
                     <div className={styles.singleCabinInfo}>
                         <CabinDescription message={messageDetail} styles={styles} />
                         <CabinInfo cabin={cabin} styles={styles} message={messageInfo} />
+                                         <span>&nbsp;</span>
                     </div>
                 </Card>        
             </>
