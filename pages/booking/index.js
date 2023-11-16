@@ -68,6 +68,7 @@ export default function Booking({ bookings}) {
 
     return (
         <>
+        <div className={styles.bookLinkCont}><a className={styles.bookLink} href='https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508'>Reservar</a></div>
             <div className="{styles.container}">
                 <BookingFilter cabins={cabins}
                         styles={styles}
