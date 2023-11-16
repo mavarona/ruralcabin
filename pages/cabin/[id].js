@@ -76,7 +76,7 @@ export default function CabinDetails({info}) {
                         </Banner>
                     </Hero>
                 </div>
-                <span><a href='https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508'>Reservar</a></span>
+                <div className={styles.bookLinkCont}><a className={styles.bookLink} href='https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508'>Reservar</a></div>
                 <Card>
                     {imagesCabin}
                     <div className={styles.singleCabinInfo}>
