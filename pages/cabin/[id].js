@@ -78,7 +78,7 @@ export default function CabinDetails({info}) {
                         </Banner>
                     </Hero>
                 </div>
-                <div className={styles.bookLinkCont}><a className={styles.bookLink} href='/booking'>{messageInfo.reservar}</a></div>
+                <div className={styles.bookLinkCont}><a className={styles.bookLink} href={messageInfo.reservarlink}>{messageInfo.reservar}</a></div>
                 <Card>
                     {imagesCabin}
                     <div className={styles.singleCabinInfo}>
