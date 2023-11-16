@@ -160,6 +160,7 @@ export default {
     privacyPolicyYourRightsList4: 'Limit the processing of your personal data in accordance with Article 18 of the RGPD.',
     privacyPolicyYourRightsList5: 'Request the portability of your data in accordance with Article 20 of the RGPD.',
     privacyPolicyYourRightsList6: 'Oppose the processing of your personal data in accordance with article 21 of the RGPD.',
+    reservar: 'book',
     search: 'Search',
     searching: 'Searching...',
     search_cabin: 'Search cabins',
