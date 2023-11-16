@@ -38,7 +38,7 @@ export default function CabinDetails({info}) {
         : null
 
     const t = getTranslate(useRouter())
-    const messageList = getMessageList(t)
+   // const messageList = getMessageList(t)
 
 
     const messageNotFound = getMessageCabinNotFound(t)
@@ -78,7 +78,7 @@ export default function CabinDetails({info}) {
                         </Banner>
                     </Hero>
                 </div>
-                <div className={styles.bookLinkCont}><a className={styles.bookLink} href='/booking'>{messageList.reservar}</a></div>
+                <div className={styles.bookLinkCont}><a className={styles.bookLink} href='/booking'>Reservar</a></div>
                 <Card>
                     {imagesCabin}
                     <div className={styles.singleCabinInfo}>
