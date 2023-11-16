@@ -307,6 +307,26 @@
   
   /* End of Banner */
 
+/*Booklink*/
+.bookLinkCont {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: -15px;
+}
+.bookLink {
+    background: #3f2a03;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+.bookLink:hover {
+    background: #895d0c;
+}
+/*End Booklink*/
+
 /* Tablet landscape */
 @media only screen and (max-width: 1024px) {
     .cabinsCenter {
