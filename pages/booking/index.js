@@ -68,7 +68,7 @@ export default function Booking({ bookings}) {
 
     return (
         <>
-        <div className={styles.bookIfrCont}><iframe className={styles.bookIfr} src="https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508"></iframe></div>
+        <div className={styles.bookIfrCont}><iframe className={styles.bookIfr} src="{messageList.reservarlinkroot}"></iframe></div>
         <div className={styles.bookIfrHide}>
                 <BookingFilter cabins={cabins}
                         styles={styles}
