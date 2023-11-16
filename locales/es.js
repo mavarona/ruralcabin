@@ -160,6 +160,7 @@ export default {
     privacyPolicyYourRightsList5: 'Solicitar la portabilidad de sus datos de acuerdo con el Artículo 20 del RGPD.',
     privacyPolicyYourRightsList6: 'Oponerse al tratamiento de sus datos personales de acuerdo con el artículo 21 del RGPD.',
     reservar: 'reservar',
+    reservarlinkroot: 'https://www.casasrurales.net',
     search: 'Buscar',
     searching: 'Buscando...',
     search_cabin: 'Buscar Cabañas',
