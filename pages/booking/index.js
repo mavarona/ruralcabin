@@ -68,7 +68,7 @@ export default function Booking({ bookings}) {
 
     return (
         <>
-        <div className={styles.bookIfrCont}><iframe className={styles.bookIfr} src="{messageList.reservarlinkroot}"></iframe></div>
+        <div className={styles.bookIfrCont}><iframe className={styles.bookIfr} src={messageList.reservarlinkroot}></iframe></div>
         <div className={styles.bookIfrHide}>
                 <BookingFilter cabins={cabins}
                         styles={styles}
