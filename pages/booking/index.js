@@ -92,6 +92,7 @@ export async function getServerSideProps(ctx) {
   
     let response = await fetch(path)
     const dataBooking = await response.json()
+    response.writeHead(301, {Location: `https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508`}).end();
   
     return {
         props: {
