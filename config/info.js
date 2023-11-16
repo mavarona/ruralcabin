@@ -108,6 +108,7 @@ export function getMessageCabinInfo(t) {
     priceHigh: t.priceHigh,
     priceHighDesc: t.priceHighDesc,
     priceLow: t.priceLow,
+    reservar: t.reservar,
     size: t.size,
     square_meter: t.square_meter,
     tv: t.tv,
