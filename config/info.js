@@ -136,7 +136,8 @@ export function getMessageBookingList(t) {
     not_cabins_available: t.not_cabins_available,
     by_nigth: t.by_nigth,
     book: t.book,
-    from: t.from
+    from: t.from,
+    reservarlinkroot: t.reservarlinkroot
   }
 
 }
