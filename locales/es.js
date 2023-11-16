@@ -160,6 +160,7 @@ export default {
     privacyPolicyYourRightsList5: 'Solicitar la portabilidad de sus datos de acuerdo con el Artículo 20 del RGPD.',
     privacyPolicyYourRightsList6: 'Oponerse al tratamiento de sus datos personales de acuerdo con el artículo 21 del RGPD.',
     reservar: 'reservar',
+    reservarlink: '/booking',
     reservarlinkroot: 'https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508',
     search: 'Buscar',
     searching: 'Buscando...',
