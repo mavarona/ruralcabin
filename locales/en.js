@@ -161,6 +161,7 @@ export default {
     privacyPolicyYourRightsList5: 'Request the portability of your data in accordance with Article 20 of the RGPD.',
     privacyPolicyYourRightsList6: 'Oppose the processing of your personal data in accordance with article 21 of the RGPD.',
     reservar: 'booking',
+    reservarlink: '/en/booking',
     reservarlinkroot: 'https://www.holidaycottagestorent.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508',
     search: 'Search',
     searching: 'Searching...',
