@@ -363,6 +363,16 @@
 .bookLink:hover {
     background: #895d0c;
 }
+.bookIfrHide { display: none; }
+.bookIfrCont {
+    width: 90%;
+    margin: 20px auto;
+}
+.bookIfr {
+    border: none;
+    width: 100%;
+    height: 2600px;
+}
 /*End Booklink*/
 
 /* Tablet landscape */
