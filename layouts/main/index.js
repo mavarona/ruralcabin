@@ -60,7 +60,7 @@ export default function Layout({children}){
                                     styleIcon={styleIconCabins} 
                                     textLink={t.cabins} />
                         <NavbarItem styles={styles} 
-                                    path='https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508' 
+                                    path='/booking' 
                                     isOpen={isOpen}
                                     openMenu={openMenu} 
                                     styleIcon={styleIconBooking} 
