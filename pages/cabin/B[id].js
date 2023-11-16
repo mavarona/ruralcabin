@@ -43,7 +43,7 @@ export default function CabinDetails({info}) {
     const messageDetail = getMessageCabinDetail(t, cabin?.detail)
     const messageInfo = getMessageCabinInfo(t)
 
-    const linkBookCabin = 'https://www.casasrurales.net/ebooking/mod_2.php?id=71158&k=138085dbb7ca94a50e8482fbf4385508'
+    const linkBookCabin = "test";
 
 
     if(!cabin) {
