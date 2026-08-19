@@ -5,7 +5,7 @@ export async function allCalendar() {
     try {
         dbConnect()
         const calendar = await Calendar.find({})
-        return calendar
+        return JSON.parse.stringify(calendar))
     } catch (error) {
         return null
     }
