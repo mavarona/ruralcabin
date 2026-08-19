@@ -5,7 +5,7 @@ export async function allInfo(res) {
     try {
         dbConnect()
         const info = await Info.find({})
-        return info
+        return JSON.parse(JSON.stringify(info))
     } catch (error) {
         return null
     }
