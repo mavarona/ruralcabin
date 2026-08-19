@@ -5,7 +5,7 @@ export async function allServices(res) {
     try {
         dbConnect()
         const services = await Service.find({})
-        return services
+        return JSON.parse(JSON.stringify(services))
     } catch (error) {
         return null
     }
