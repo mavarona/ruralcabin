@@ -33,7 +33,7 @@ export async function getCabin(req, select) {
             cabin = await Cabin.findById(id)
         }
 
-        return cabin
+        return JSON.parse(JSON.stringify(cabin))
 
     } catch (error) {
         return null
