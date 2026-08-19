@@ -6,7 +6,7 @@ export async function getVouchers(res) {
 
         dbConnect()
         const vouchers = await Voucher.find({enabled: true})
-        return vouchers
+        return JSON.parse(JSON.stringify)vouchers))
     } catch (error) {
         return res.json({
             message: new Error(error).message,
