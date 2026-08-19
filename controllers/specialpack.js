@@ -7,7 +7,7 @@ export async function getSpecialspack(req, res) {
         dbConnect()
         /** TODO filter by date */
         const specialspack = await Specialpack.find({})
-        return specialspack
+        return JSON.parse(JSON.stringify(specialspack))
     } catch (error) {
         return res.json({
             message: new Error(error).message,
