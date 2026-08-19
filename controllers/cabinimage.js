@@ -15,7 +15,7 @@ export async function getImages(req, select) {
             images = await Cabinimage.find({cabin_id: mongoose.Types.ObjectId(id)})
         }
 
-        return images
+        return JSON.parse(JSON.stringify(images))
 
     } catch (error) {
         return null
