@@ -7,8 +7,8 @@ export default function NavbarLogo({styles, path, image, altText}) {
         <Link href={path}>
             <a className={styles.navlogoMain}>
                 <Image src={image}
-                    width='200px'
-                    height='50px' 
+                    width={200}
+                    height={50}
                     alt={altText} />
             </a>
         </Link>
