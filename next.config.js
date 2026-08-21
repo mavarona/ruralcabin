@@ -5,4 +5,7 @@ module.exports = {
     defaultLocale: 'es',
     localeDetection: false,
   }
+  images: {
+unoptimized:true,
+  }
 }
