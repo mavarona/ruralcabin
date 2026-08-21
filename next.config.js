@@ -4,7 +4,7 @@ module.exports = {
     locales: ['es', 'en'],
     defaultLocale: 'es',
     localeDetection: false,
-  }
+  },
   images: {
 unoptimized:true,
   }
