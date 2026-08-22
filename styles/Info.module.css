@@ -170,7 +170,8 @@
 /* Desktop */
 @media only screen and (min-width: 1025px) {
   .infolistCenter {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 240px));
+    max-width: 280px;
+    margin: 0 auto;
   }
   .imgContainerImg {
     max-width: 240px;
