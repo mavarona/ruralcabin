@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import { Card } from 'primereact/card'
 import ButtonLink from '@components/common/buttonlink'
 
@@ -21,10 +21,10 @@ export default function Info({info, styles, message}){
       <>
         <Card header={cardHeader}>
             <p className={styleDescription}>{info.description}</p>
-            <Image src={imagePath} 
+            <img src={imagePath} 
                     alt=''
-                    width={300}
-                    height={300}
+                    width="300"
+                    height="300"
                     className={styles.imgContainerImg} 
             />
             {info.link.trim() !== '' &&  
