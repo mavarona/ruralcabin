@@ -172,4 +172,9 @@
   .infolistCenter {
     grid-template-columns: repeat(auto-fill, minmax(200px, 240px));
   }
+  .imgContainerImg {
+    max-width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
