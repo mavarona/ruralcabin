@@ -52,7 +52,7 @@ export default {
     infogeneral2: 'We have several models of cabins, including one accessible for people with reduced mobility. All are designed for 2 adults and 2 children maximum capacity.',
     infogeneral3: '(Choose your cabin and check the specific equipment of each cabin).',
     infogeneral4: 'For any questions you can contact us.',
-    infooffer1: 'Daily breakfast from 08:00 to 10:00 in reception.',
+    infooffer1: 'Daily breakfast from 09:30 to 11:00 in July and August 08:30 to 10:00 in reception.',
     infooffer2: 'WiFi.',
     infooffer3: 'Private Jacuzzi with views.',
     infooffer4: 'Welcome details in the cabin.',
