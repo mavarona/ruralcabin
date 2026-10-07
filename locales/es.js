@@ -48,7 +48,7 @@ export default {
     idiom: 'Idioma',
     info: 'Información',
     infogeneral1: 'Nuestras Cabañas están situadas  a un 1 km del fantástico Mirador de Ézaro y su cascada. A los pies del Monte Pindo y 3 km de las playas de la Costa da Morte gallega.',
-    infogeneral2: 'Disponemos de varios modelos de cabañas, incluida una accesible para personas con movilidad reducida. Todas están diseñadas para 2 adultos y 2 niños de capacidad máxima.',
+    infogeneral2: 'Disponemos de varios modelos de cabañas, desde 3 hasta 6 personas, incluida una accesible para personas con movilidad reducida.',
     infogeneral3: '(Elija su cabaña y compruebe el equipamiento concreto de cada cabaña).',
     infogeneral4: 'Para cualquier duda pueden consultarnos.',
     infooffer1: 'Desayuno diario de 09:30 a 11:00 horas y de 08:30 a 10:00 horas durante juklio y agosto, nosotros lo servimos siempre en la cabaña grande de recepción.',
