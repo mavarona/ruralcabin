@@ -51,7 +51,7 @@ export default {
     infogeneral2: 'Disponemos de varios modelos de cabañas, incluida una accesible para personas con movilidad reducida. Todas están diseñadas para 2 adultos y 2 niños de capacidad máxima.',
     infogeneral3: '(Elija su cabaña y compruebe el equipamiento concreto de cada cabaña).',
     infogeneral4: 'Para cualquier duda pueden consultarnos.',
-    infooffer1: 'Desayuno diario de 08:00 a 10:00 horas en recepción.',
+    infooffer1: 'Desayuno diario de 09:30 a 11:00 horas y de 08:00 a 10:00 horas durante juklio y agosto, nosotros lo servimos siempre en la cabaña grande de recepción.',
     infooffer2: 'WiFi.',
     infooffer3: 'Jacuzzi privado con vistas.',
     infooffer4: 'Detalles de bienvenida en la cabaña.',
