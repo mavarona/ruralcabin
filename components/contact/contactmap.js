@@ -1,5 +1,5 @@
 
-export default function ContactMap({styles, path}){
+export default function ContactMap({styles, path, title}){
  
     return (
             <div className="mapouter">
@@ -7,6 +7,8 @@ export default function ContactMap({styles, path}){
                     <iframe className={styles.iframeMap}
                             id="gmap_canvas" 
                             src={path}
+                            title={title}
+                            loading='lazy'
                             frameBorder="0" 
                             scrolling="no" 
                             marginHeight="0" 

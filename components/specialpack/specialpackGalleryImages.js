@@ -1,38 +1,33 @@
-import { Galleria } from 'primereact/galleria'
+import { useState } from 'react'
 import Image from 'next/image'
 
-export default function SpecialpackGalleryImages({images, styles}){
-
-    const galleriaResponsiveOptions = [
-        {
-            breakpoint: "1024px",
-            numVisible: 5,
-        },
-        {
-            breakpoint: "960px",
-            numVisible: 4,
-        },
-        {
-            breakpoint: "768px",
-            numVisible: 3,
-        },
-        {
-            breakpoint: "560px",
-            numVisible: 1,
-        },
-    ]
-
-    const galleriaItemTemplate = (item) => <Image src={item.image} alt="Detalle" width="350" height="350" className={styles.imgContainerImgDetail} />
-    const galleriaThumbnailTemplate = (item) => <Image src={item.image} alt="Detalle" width="100" height="100" className={styles.imgContainerImgDetail} />
+export default function SpecialpackGalleryImages({images, styles, title, message}){
+    const [activeIndex, setActiveIndex] = useState(0)
+    const index = activeIndex % images.length
+    const moveImage = (direction) => setActiveIndex(current => (current + direction + images.length) % images.length)
 
     return (
-        <Galleria value={images} 
-                 responsiveOptions={galleriaResponsiveOptions} 
-                 numVisible={images.length} 
-                 circular 
-                 style={{ maxWidth: '800px', margin: 'auto' }}
-                 item={galleriaItemTemplate} 
-                 thumbnail={galleriaThumbnailTemplate}>
-        </Galleria>
-    )          
+        <div className={styles.offerGallery} role='group' aria-label={title}>
+            <div className={styles.offerImage}>
+                <Image key={index} src={images[index].image} alt={title}
+                       layout='fill' objectFit='contain'
+                       sizes='(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw' />
+            </div>
+            {images.length > 1 && (
+                <>
+                    <button type='button' className={`${styles.galleryControl} ${styles.galleryPrevious}`}
+                            aria-label={message.previous_image} onClick={() => moveImage(-1)}>
+                        <i className='fas fa-chevron-left' aria-hidden='true' />
+                    </button>
+                    <button type='button' className={`${styles.galleryControl} ${styles.galleryNext}`}
+                            aria-label={message.next_image} onClick={() => moveImage(1)}>
+                        <i className='fas fa-chevron-right' aria-hidden='true' />
+                    </button>
+                    <span className={styles.galleryCounter} aria-live='polite' aria-atomic='true'>
+                        {index + 1} / {images.length}
+                    </span>
+                </>
+            )}
+        </div>
+    )
 }

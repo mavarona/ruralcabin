@@ -1,54 +1,22 @@
-
-import { Card } from 'primereact/card'
-import ButtonLink from '@components/common/buttonlink'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Info({info, styles, message}){
-
-    const imagePath = `${info.image}`
-    const styleCardHeader = 'flex align-items-center justify-content-between mb-0 p-3 pb-0'
-    const styleTitleCard = `m-0 ${styles.titleCard}`
-    const styleDescription = 'm-0'
-
-    const cardHeader = (
-        <div className={styleCardHeader}>
-            <h5 className={styleTitleCard}>{info.title}</h5>
-        </div>
-    )
-
-    const pStyle = `m-2 ${styles.buttonContainer}`
-
     return (
-      <>
-        <Card header={cardHeader}>
-            <p className={styleDescription}>{info.description}</p>
-            <img src={imagePath} 
-                    alt=''
-                    width="300"
-                    height="300"
-                    className={styles.imgContainerImg} 
-            />
-            {info.link.trim() !== '' &&  
-                <p className={pStyle}>
-                    <a href={info.link}
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className={styles.anchorButton}>
-                        {message.view_more}
-                    </a>
-                </p> 
-            }
-
-            { info.path.trim() !== '' && 
-                    <p className={pStyle}>
-                        <ButtonLink path={info.path}>
-                            <span className={styles.anchorButton}>
-                                {message.view_more}
-                            </span>
-                        </ButtonLink> 
-                    </p> 
-            }
-           
-        </Card>
-      </>
-    )           
+        <article className={styles.destinationArticle}>
+            {info.image && <div className={styles.destinationPhoto}>
+                <Image src={info.image} alt={info.title || ''} layout='fill' objectFit='cover'
+                       sizes='(max-width: 639px) 100vw, 50vw' />
+            </div>}
+            <div>
+                <h2 className={styles.destinationTitle}>{info.title}</h2>
+                <p className={styles.destinationDescription}>{info.description}</p>
+                {info.link?.trim() && <a href={info.link} target='_blank' rel='noopener noreferrer'
+                    className={styles.textLink}>{message.view_more}<i className='fas fa-arrow-right' aria-hidden='true' /></a>}
+                {info.path?.trim() && <Link href={info.path}>
+                    <a className={styles.textLink}>{message.view_more}<i className='fas fa-arrow-right' aria-hidden='true' /></a>
+                </Link>}
+            </div>
+        </article>
+    )
 }
