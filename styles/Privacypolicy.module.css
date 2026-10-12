@@ -1,18 +1,54 @@
+.policyDocument {
+    width: 100%;
+    max-width: 68ch;
+    margin: 0 auto;
+    color: #514b43;
+    font-size: 1rem;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
 .dialogP {
-    margin-bottom: 0.7rem !important;
-  }
+    margin: 0 0 1rem !important;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.policyDocument > .dialogP:first-child {
+    margin-bottom: 1.5rem !important;
+    color: #66584a;
+    font-size: .875rem;
+}
+
+.policyDocument h3.dialogP {
+    margin: 1.75rem 0 .85rem !important;
+    padding: .75rem .85rem;
+    border-left: 4px solid #d69d5a;
+    border-radius: 0 8px 8px 0;
+    background: #f6ecde;
+    color: #3f2a03;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
 
 .dialogSpanBold {
     font-weight: bold;
+    color: #3f2a03;
   }
 
 .dialogLi {
     list-style-type: disc;
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
+    margin-left: 1.25rem;
+    margin-bottom: .65rem;
+    line-height: 1.65;
 }
 
+.dialogLi::marker { color: #795122; }
+
 .dialogA {
-    color: darkblue;
+    color: #795122;
     text-decoration: underline;
 }
+
+.dialogA:focus-visible { outline: 3px solid #a46f2f; outline-offset: 3px; }

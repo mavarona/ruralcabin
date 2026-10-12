@@ -7,7 +7,7 @@ export default function Privacypolicy(){
     const t = getTranslate(useRouter())
 
     return (
-        <>
+        <article className={styles.policyDocument}>
             <p className={styles.dialogP}>
                 {t.privacyPolicyHeader}
             </p>
@@ -128,6 +128,6 @@ export default function Privacypolicy(){
             <p className={styles.dialogP}> 
                 {t.privacyPolicyLegalInfo2}
             </p>
-        </>
+        </article>
     )               
 }
