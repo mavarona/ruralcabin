@@ -1,52 +1,46 @@
-import { Card } from 'primereact/card'
-import ButtonLink from '@components/common/buttonlink'
+import Image from 'next/image'
+import Link from 'next/link'
+
+const serviceIcons = ['fa-mug-hot', 'fa-wifi', 'fa-hot-tub', 'fa-gift', 'fa-parking', 'fa-mountain', 'fa-utensils', 'fa-charging-station']
 
 export default function InfoGeneral({styles, message}){
-
-    const styleCardHeader = 'flex align-items-center justify-content-between mb-0 p-3 pb-0'
-    const styleTitleCard = `m-0 ${styles.titleCard}`
-    const styleDescription = 'm-0'
-    const styleLi = `m-0 ${styles.fontbold}`
-    const path = '/contact'
-
-    const cardHeader = (
-        <div className={styleCardHeader}>
-            <h5 className={styleTitleCard}>{message.info}</h5>
-        </div>
-    )
-
-    const pStyle = `m-2 ${styles.buttonContainer}`
+    const services = Array.from({length: 8}, (_, index) => message[`infooffer${index + 1}`])
 
     return (
-      <>
-        <Card header={cardHeader}>
-            <p className={styleDescription}>{message.infogeneral1}</p>
-            <br></br>
-            <p className={styleDescription}>{message.infogeneral2}</p>
-            <br></br>
-            <p className={styleDescription}>{message.we_offer} :</p>
-            <ul>
-                <li className={styleLi}>- {message.infooffer1}</li>
-                <li className={styleLi}>- {message.infooffer2}</li>
-                <li className={styleLi}>- {message.infooffer3}</li>
-                <li className={styleLi}>- {message.infooffer4}</li>
-                <li className={styleLi}>- {message.infooffer5}</li>
-                <li className={styleLi}>- {message.infooffer6}</li>
-                <li className={styleLi}>- {message.infooffer7}</li>
-                <li className={styleLi}>- {message.infooffer8}</li>
-            </ul>
-            <br></br>
-            <p className={styleDescription}>{message.infogeneral3}</p>
-            <br></br>
-            <p className={styleDescription}>{message.infogeneral4}</p>
-            <p className={pStyle}>
-                <ButtonLink path={path}>
-                    <span className={styles.anchorButton}>
-                        {message.contact}
-                    </span>
-                </ButtonLink> 
-            </p> 
-        </Card>
-      </>
-    )           
+        <>
+            <header className={styles.pageHeader}>
+                <h1 className={styles.pageTitle}>{message.info}</h1>
+            </header>
+            <div className={styles.infoPhoto}>
+                <Image src='/cabinmain.jpeg' alt='' layout='fill' objectFit='cover'
+                       sizes='(max-width: 767px) 100vw, 1100px' priority />
+            </div>
+            <div className={styles.infoContent}>
+                <div className={styles.infoIntro}>
+                    <p>{message.infogeneral1}</p>
+                    <p>{message.infogeneral2}</p>
+                </div>
+                <section className={styles.services} aria-labelledby='included-services'>
+                    <h2 id='included-services' className={styles.sectionTitle}>{message.we_offer}</h2>
+                    <ul className={styles.serviceList}>
+                        {services.map((service, index) => (
+                            <li key={index} className={styles.serviceRow}>
+                                <span className={styles.serviceIcon} aria-hidden='true'>
+                                    <i className={`fas ${serviceIcons[index]}`} />
+                                </span>
+                                <p>{service}</p>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+                <p className={styles.equipmentNote}>{message.infogeneral3}</p>
+                <div className={styles.infoContact}>
+                    <p>{message.infogeneral4}</p>
+                    <Link href='/contact'>
+                        <a className={styles.primaryButton}>{message.contact}</a>
+                    </Link>
+                </div>
+            </div>
+        </>
+    )
 }
