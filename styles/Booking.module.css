@@ -1,9 +1,11 @@
 .container {
     min-height: 95vh;
-    padding: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: var(--primaryColor);
+    background: #f6ecde;
 }
 
 .filterContainer {
@@ -289,27 +291,30 @@
 }
 
 .formBooking {
-    border: 1px solid var(--secondaryColor);
-    width: 600px;
-    height:530px;
+    border: 1px solid #d8c5ac;
+    border-radius: 16px;
+    width: min(100%, 600px);
+    background: #fffdf9;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgb(63 42 3 / 10%);
 }
 
 .formBookingHeader {
-    background-color: #6366F1;
+    background-color: var(--primaryColor);
     color: var(--mainWhite);
     font-size: 1.5rem;
     text-align: center;
-    padding: 0.5rem;
-    height: 50px;
+    padding: 1rem;
+    min-height: 50px;
 }
 
 .formBookingTotal {
-    background-color: #65a365;
-    color: var(--mainWhite);
+    background-color: #f6ecde;
+    color: var(--primaryColor);
     font-size: 1.5rem;
     text-align: center;
-    padding: 0.5rem;
-    height: 50px;
+    padding: 0.75rem;
+    min-height: 50px;
     margin-bottom: 0.2rem;
 }
 
@@ -365,11 +370,21 @@
 }
 .bookIfrHide { display: none; }
 .bookIfrCont {
-    width: 90%;
-    margin: 20px auto;
+    width: calc(100% - 2rem);
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0.5rem;
+    border: 1px solid #a46f2f;
+    border-radius: 16px;
+    background: var(--primaryColor);
+    color: var(--primaryColor);
+    box-shadow: 0 8px 24px rgb(63 42 3 / 10%);
 }
 .bookIfr {
+    display: block;
     border: none;
+    border-radius: 9px;
+    background: #fffdf9;
     width: 100%;
     height: 3300px;
 }
@@ -379,8 +394,7 @@
 @media only screen and (max-width: 1024px) {
 
     .formBooking {
-        width: 500px;
-        height:510px;
+        width: min(100%, 500px);
     }
 
     .filterForm {
@@ -389,11 +403,11 @@
     } 
 
     .formBookingHeader {
-        height: 40px;
+        min-height: 40px;
     }
 
     .formBookingTotal {
-        height: 40px;
+        min-height: 40px;
     }
 
     .formBookingBody {
@@ -439,8 +453,7 @@
 
     .formBooking {
         border: 1px solid var(--primaryColor);
-        width: 320px;
-        height:500;
+        width: 100%;
     }
 
     .title {
@@ -462,13 +475,13 @@
     }
 
     .formBookingHeader {
-        font-size: 0.9rem;
-        height: 30px;
+        font-size: 1rem;
+        min-height: 48px;
     }
 
     .formBookingTotal {
-        font-size: 0.9rem;
-        height: 30px;   
+        font-size: 1rem;
+        min-height: 48px;
     }
 
     .formBookingBody {
@@ -489,3 +502,41 @@
         margin-top: 0;
     }
 }
+
+/* Own booking controls only; the external booking document keeps its styles. */
+.formBooking > :global(.card) { padding: 1rem; }
+.formBooking .formInputSpan, .formBooking .formCheckboxSpan,
+.formBooking .formButtonSpan { display: block; width: 100%; margin-left: 0; }
+.formBooking .formInputControl:global(.p-inputtext),
+.formBooking .formTextareaControl:global(.p-inputtext) {
+    min-height: 48px;
+    border: 1px solid #cdbfaf;
+    border-radius: 7px;
+    background: #fff;
+    color: var(--primaryColor);
+    font-size: 1rem;
+}
+.formBooking :global(.p-inputtext:enabled:hover) { border-color: #996c38; }
+.formBooking :global(.p-inputtext:enabled:focus) {
+    border-color: #795122;
+    box-shadow: 0 0 0 3px rgb(166 112 47 / 18%);
+}
+.formBooking :global(.p-float-label > label) { color: #66584a; }
+.formBooking :global(.p-button) {
+    min-height: 48px;
+    border-color: var(--primaryColor);
+    background: var(--primaryColor);
+    color: #fff;
+    font-size: 1rem;
+}
+.formBooking :global(.p-button:enabled:hover) {
+    border-color: #5a3c13;
+    background: #5a3c13;
+}
+.formBooking :global(.p-button:focus) { box-shadow: 0 0 0 3px rgb(166 112 47 / 25%); }
+.formBooking .formButtonBooking, .formBooking .formButtonDisabled { width: 100%; }
+.formBooking .formButtonDisabled { background: #96876f; border-color: #96876f; color: #fff; }
+.divPrivatePolicy :global(.p-button.p-button-text) { background: transparent; border-color: transparent; color: var(--primaryColor); }
+.divPrivatePolicy :global(.p-checkbox .p-checkbox-box.p-highlight) { background: var(--primaryColor); border-color: var(--primaryColor); }
+.divPrivatePolicy :global(.p-checkbox .p-checkbox-box:hover) { border-color: #795122; }
+.divPrivatePolicy :global(.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus) { box-shadow: 0 0 0 3px rgb(166 112 47 / 25%); border-color: #795122; }
