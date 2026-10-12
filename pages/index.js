@@ -1,11 +1,8 @@
 import { useRouter } from 'next/router'
 import { useState, useEffect} from 'react'
 import styles from '@styles/Home.module.css'
-import stylesInfo from '@styles/Info.module.css'
-
-import Hero from '@components/common/hero'
-import Banner from '@components/common/banner'
-import ButtonLink from '@components/common/buttonlink'
+import Image from 'next/image'
+import Link from 'next/link'
 
 import InfoList from '@components/info/infolist'
 
@@ -78,17 +75,27 @@ export default function Home({home}) {
   }, [session_id, wrong])
 
   return (
-    <div className={styles.container}>
-      <Hero style={styles.defaultHero}>
-        <Banner
-          style={styles.banner}
-          title={t.cabins}
-          subtitle={t.cabins_subtitle}
-        >
-          <ButtonLink path='/cabin'>
-            {t.our_cabins}
-          </ButtonLink>
-        </Banner>
+    <main className={styles.container}>
+      <section className={styles.hero}>
+        <div className={styles.heroCopy}>
+          <h1 className={styles.heroTitle}>{t.home_title}</h1>
+          <p className={styles.heroSubtitle}>{t.cabins_subtitle}</p>
+          <p className={styles.heroIntro}>{t.home_intro}</p>
+          <div className={styles.heroActions}>
+            <Link href='/cabin'><a className={styles.primaryButton}>{t.our_cabins}</a></Link>
+            <Link href='/booking'><a className={styles.secondaryButton}>{t.book}</a></Link>
+          </div>
+        </div>
+        <div className={styles.heroPhoto}>
+          <Image src='/cabinmain.jpeg' alt={t.home_title} layout='fill' objectFit='cover'
+                 sizes='(max-width: 1023px) 100vw, 60vw' priority />
+        </div>
+      </section>
+      <ul className={styles.benefits}>
+        <li><i className='fas fa-hot-tub' aria-hidden='true' /><span>{t.private_jacuzzi}</span></li>
+        <li><i className='fas fa-mug-hot' aria-hidden='true' /><span>{t.daily_breakfast}</span></li>
+        <li><i className='fas fa-wifi' aria-hidden='true' /><span>{t.wifi}</span></li>
+      </ul>
         <Dialog header={t.info}
                         visible={displayDialog} 
                         style={{ width: '80vw' }} 
@@ -99,16 +106,18 @@ export default function Home({home}) {
                         }}>
                         {msgBooking}
                 </Dialog>
-        <div className={styles.containerServices}>
-          <div>
-            <InfoList info={home}
-                      styles={stylesInfo} 
-                      message={messageList}
-            />
-          </div>
+      <div className={styles.destination}>
+        <InfoList info={home} styles={styles} message={messageList} />
+      </div>
+      <section className={styles.homeContact}>
+        <h2>{t.info}</h2>
+        <p>{t.infogeneral4}</p>
+        <div className={styles.heroActions}>
+          <Link href='/info'><a className={styles.primaryButton}>{t.info}</a></Link>
+          <Link href='/specialpack'><a className={styles.secondaryButton}>{t.specialpack}</a></Link>
         </div>
-      </Hero>
-    </div>
+      </section>
+    </main>
   )
 }
 
