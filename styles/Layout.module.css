@@ -118,14 +118,14 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: .4rem;
-    padding: 1.25rem 1rem;
+    gap: 1rem;
+    padding: 1.25rem calc(60px + 2vw + 1rem) 1.25rem 1rem;
     background: var(--primaryColor);
     color: var(--mainWhite);
 }
 
 .footerApp div {
-    padding-right: 0.1rem;
+    padding-right: 0;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -177,8 +177,6 @@
         min-width: 48px;
         min-height: 48px;
     }
-
-    .footerApp { padding-bottom: 5.5rem; }
 
     /*.hamburger.active .bar:nth-child(2) {
         opacity: 0;
