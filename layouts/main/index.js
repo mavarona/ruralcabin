@@ -9,7 +9,7 @@ import NavbarImage from '@components/navbar/navbarimage'
 import NavbarButtonHamburger from '@components/navbar/navbarbuttonhamburger'
 
 import Youtube from '@components/common/youtube'
-import Twitter from '@components/common/twitter'
+import X from '@components/common/x'
 import Facebook from '@components/common/facebook'
 import Instagram from '@components/common/instagram'
 import Whatsapp from '@components/common/whatsapp'
@@ -137,7 +137,7 @@ export default function Layout({children}){
         </div>
         <footer className={styles.footerApp}> 
             <Youtube />
-            <Twitter />
+            <X />
             <Facebook />
             <Instagram />
         </footer>
