@@ -44,6 +44,15 @@
     letter-spacing: 0.04em;
     white-space: nowrap;
     display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.navlink > i {
+    flex: 0 0 24px;
+    width: 24px;
+    margin: 0;
+    text-align: center;
 }
 
 .navlink:hover{
@@ -119,7 +128,7 @@
     padding-right: 0.1rem;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1199px) {
     .header {
         position: -webkit-sticky;
         position: sticky;
