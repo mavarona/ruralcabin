@@ -1,15 +1,14 @@
 import Info from '@components/info/info'
 import MessageSearch from '@components/common/messagesearch'
 
-export default function InfoList({info, styles, message}) {
+export default function InfoList({info = [], styles, message}) {
     if (info.length === 0) {
       return(
-        <MessageSearch style={styles.emptySearch} message={message.not_specialpack_found} />
+        <MessageSearch style={styles.emptySearch} message={message.not_info_found} />
       )
     } else {
       return (
-        <section className={styles.specialpacklist}>
-          <div className={styles.specialpacklistCenter}>
+        <section className={styles.destinationList}>
             {info.map(inf => {
                     return (
                         <Info key={inf._id}
@@ -18,7 +17,6 @@ export default function InfoList({info, styles, message}) {
                                      message={message}/>
                     )
                 })}
-          </div>
         </section>
       ) 
     }          
