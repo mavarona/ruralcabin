@@ -39,7 +39,10 @@ export function getMessageList(t) {
 export function getSpecialpackList(t) {
 
   return {
-    not_cabins_found: t.not_cabins_found,
+    not_specialpack_found: t.not_specialpack_found,
+    consult_offer: t.consult_offer,
+    previous_image: t.previous_image,
+    next_image: t.next_image,
     code: t.code,
     cost: t.cost
   }
