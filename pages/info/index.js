@@ -1,4 +1,4 @@
-import styles from '@styles/Info.module.css'
+import styles from '@styles/GuestPages.module.css'
 import { useRouter } from 'next/router'
 import InfoGeneral from '@components/info/infogeneral'
 
@@ -11,14 +11,12 @@ export default function Info() {
   const messageList = getInfoGeneral(t)
 
   return (
-    <>
-      <div className={styles.container}>
+      <main className={`${styles.page} ${styles.infoPage}`}>
         <InfoGeneral 
             styles={styles}
             message={messageList}
         />
-      </div>
-    </>
+      </main>
   )
 
 }
