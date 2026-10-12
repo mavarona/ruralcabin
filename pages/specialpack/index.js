@@ -1,10 +1,9 @@
-import styles from '@styles/Specialpack.module.css'
+import styles from '@styles/GuestPages.module.css'
 import SpecialpackList from '@components/specialpack/specialpacklist'
 import { useRouter } from 'next/router'
 
 import { getTranslate } from '@lib/locale'
 import { getSpecialpackList } from '@config/info'
-import Title from '@components/common/title'
 
 import dataApi from '@api/data'
 
@@ -14,23 +13,26 @@ export default function Specialpack({specialpacks, specialpackimages}) {
   const messageList = getSpecialpackList(t)
 
   return (
-    <>
-      <div className={styles.container}>
-      <Title style={styles.title} text={t.specialpack_message} />
+      <main className={styles.page}>
+        <header className={styles.pageHeader}>
+          <h1 className={styles.pageTitle}>{t.specialpack}</h1>
+          <p className={styles.pageSubtitle}>{t.specialpack_message}</p>
+        </header>
         <SpecialpackList specialpacks={specialpacks}
                          specialpackimages={specialpackimages}
                          styles={styles}
                          message={messageList}
         />
-      </div>
-    </>
+      </main>
   )
 
 }
 
 export async function getStaticProps() {
-  const {data} = await dataApi.get('/specialpacks')
-  const dataImages = await dataApi.get(`/specialpackimages`)
+  const [{data}, dataImages] = await Promise.all([
+    dataApi.get('/specialpacks'),
+    dataApi.get('/specialpackimages')
+  ])
 
   return {
     props: {
