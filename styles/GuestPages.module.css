@@ -61,7 +61,7 @@
 .info i { flex: 0 0 26px; color: var(--wood-text); font-size: 1.25rem; background: transparent; }
 .info_location { font-size: 1rem; font-weight: 600; line-height: 1.5; }
 .info:focus-visible { outline: 3px solid #a46f2f; outline-offset: 3px; }
-.formArea { min-width: 0; padding: 1.25rem .65rem 2rem; border-radius: 16px; background: #3f5133 url('/cabinmain.jpeg') center / cover; }
+.formArea { min-width: 0; padding: 1.25rem .65rem 2rem; border-radius: 16px; background: #f6ecde; }
 .formArea > .sectionTitle { width: fit-content; margin: 0 auto 1rem; padding: .4rem 1rem; border-radius: 8px; background: #fff; color: var(--wood-text); text-align: center; }
 .woodForm { padding: .55rem; border-radius: 15px; background: #b78250 url('/wood-grain.jpg') center / cover; box-shadow: 0 16px 30px rgb(24 30 15 / 30%), 0 2px 5px rgb(0 0 0 / 14%); }
 .formBody { padding: 1rem; border: 1px solid #dbc7ad; border-radius: 9px; background: #fffdf9; }
