@@ -4,6 +4,7 @@ import SpecialpackGalleryImages from '@components/specialpack/specialpackGallery
 export default function Specialpack({specialpack, images, styles, message}){
     const paragraphs = (specialpack.info || '').split(/\n+/).filter(text => text.trim())
     const isGiftVoucher = /bono regalo/i.test(`${specialpack.code || ''} ${specialpack.title || ''}`)
+    const showCost = specialpack.cost && !/^\s*consultar/i.test(specialpack.cost)
 
     return (
         <article className={styles.offerCard}>
@@ -16,10 +17,9 @@ export default function Specialpack({specialpack, images, styles, message}){
                 <div className={styles.offerDescription}>
                     {paragraphs.map((text, index) => <p key={index}>{text}</p>)}
                 </div>
-                {(specialpack.code || specialpack.cost) && (
+                {showCost && (
                     <dl className={styles.offerDetails}>
-                        {specialpack.code && <div><dt>{message.code}</dt><dd>{specialpack.code}</dd></div>}
-                        {specialpack.cost && <div><dt>{message.cost}</dt><dd>{specialpack.cost}</dd></div>}
+                        <div><dt>{message.cost}</dt><dd>{specialpack.cost}</dd></div>
                     </dl>
                 )}
                 {isGiftVoucher ? (
