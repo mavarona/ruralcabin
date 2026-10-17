@@ -21,6 +21,20 @@ export default function Layout({children}){
     const [isOpen,setIsOpen] = useState(false)
     const openMenu = ()=> setIsOpen(!isOpen)
     const t = getTranslate(useRouter())
+
+    const router = useRouter()
+    const seoPages = {
+        '/': 'home',
+        '/cabin': 'cabin',
+        '/booking': 'booking',
+        '/contact': 'contact',
+        '/specialpack': 'specialpack',
+        '/info': 'info'
+    }
+    const seoName = seoPages[router.pathname]
+    const pageTitle = (seoName && t[`seo_title_${seoName}`]) || t.title_page
+    const pageDescription = (seoName && t[`seo_description_${seoName}`]) || t.meta_description
+
     const styleIconCabins = `fas fa-home fa-1x ${styles.cabins}`
     const styleIconBooking = `fas fa-address-card fa-1x ${styles.booking}`
     const styleIconContact = `fas fa-file-signature fa-1x ${styles.contact}`
@@ -40,8 +54,8 @@ export default function Layout({children}){
 
     return <> 
             <Head>
-                <title>{t.title_page}</title>
-                <meta name="description" content={t.meta_description} />
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
                 <link rel="icon" href="/naturhunt.ico" />
             </Head>
@@ -53,93 +67,4 @@ export default function Layout({children}){
                                 altText={t.home_page} 
                                 />
                     <ul className={isOpen === false ? styles.navmenu : styles.navmenu +' '+ styles.active}>
-                        <NavbarItem styles={styles} 
-                                    path='/cabin' 
-                                    isOpen={isOpen}
-                                    openMenu={openMenu} 
-                                    styleIcon={styleIconCabins} 
-                                    textLink={t.cabins} />
-                        <NavbarItem styles={styles} 
-                                    path='/booking' 
-                                    isOpen={isOpen}
-                                    openMenu={openMenu} 
-                                    styleIcon={styleIconBooking} 
-                                    textLink={t.booking} />
-                        <NavbarItem styles={styles} 
-                                    path='/contact' 
-                                    isOpen={isOpen}
-                                    openMenu={openMenu} 
-                                    styleIcon={styleIconContact} 
-                                    textLink={t.contact} />
-                        <NavbarItem styles={styles} 
-                                    path='/specialpack' 
-                                    isOpen={isOpen}
-                                    openMenu={openMenu} 
-                                    styleIcon={styleIconSpecialpack} 
-                                    textLink={t.specialpack} />
-                        <NavbarItem styles={styles} 
-                                    path='/info' 
-                                    isOpen={isOpen}
-                                    openMenu={openMenu} 
-                                    styleIcon={styleIconInfo} 
-                                    textLink={t.info} />
-                        {displayLogin === 'true' ? 
-                            <>
-                                <NavbarItem styles={styles} 
-                                        path='/login' 
-                                        isOpen={isOpen}
-                                        openMenu={openMenu} 
-                                        styleIcon={styleIconLogin} 
-                                        textLink={t.login} />
-                            </>
-                        : null    
-                        }
-                        
-                        { getLocale(useRouter()) === 'en' ?
-                            <NavbarImage styles={styles}
-                                        path='#'
-                                        locale='es'
-                                        isOpen={isOpen}
-                                        openMenu={openMenu}
-                                        image='/es.png'
-                                        altText={t.spanish}
-                                        text={textChange} />
-                            :  
-                            <NavbarImage styles={styles}
-                                        path='#'
-                                        locale='en'
-                                        isOpen={isOpen}
-                                        openMenu={openMenu}
-                                        image='/gb.png'
-                                        altText={t.english}
-                                        text={textChange} />                   
-                        }
-                        { isOpen === true && (
-                            <>
-                            <NavbarItem styles={styles} 
-                                    path='#'
-                                    isOpen={isOpen}
-                                    openMenu={callPhone} 
-                                    styleIcon={styleIconPhone} 
-                                    textLink={t.callus} />
-                            </>
-                        )}
-                    </ul>
-                    <NavbarButtonHamburger styles={styles} 
-                                           isOpen={isOpen}
-                                           openMenu={openMenu}
-                                           label={t.menu} />
-                </nav>
-            </header>
-        {children}
-        <div className={styles.container}>
-            <Whatsapp />
-        </div>
-        <footer className={styles.footerApp}> 
-            <Youtube />
-            <X />
-            <Facebook />
-            <Instagram />
-        </footer>
-     </>
-}
+                        <NavbarItem styles={st
