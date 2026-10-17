@@ -67,4 +67,93 @@ export default function Layout({children}){
                                 altText={t.home_page} 
                                 />
                     <ul className={isOpen === false ? styles.navmenu : styles.navmenu +' '+ styles.active}>
-                        <NavbarItem styles={st
+                        <NavbarItem styles={styles} 
+                                    path='/cabin' 
+                                    isOpen={isOpen}
+                                    openMenu={openMenu} 
+                                    styleIcon={styleIconCabins} 
+                                    textLink={t.cabins} />
+                        <NavbarItem styles={styles} 
+                                    path='/booking' 
+                                    isOpen={isOpen}
+                                    openMenu={openMenu} 
+                                    styleIcon={styleIconBooking} 
+                                    textLink={t.booking} />
+                        <NavbarItem styles={styles} 
+                                    path='/contact' 
+                                    isOpen={isOpen}
+                                    openMenu={openMenu} 
+                                    styleIcon={styleIconContact} 
+                                    textLink={t.contact} />
+                        <NavbarItem styles={styles} 
+                                    path='/specialpack' 
+                                    isOpen={isOpen}
+                                    openMenu={openMenu} 
+                                    styleIcon={styleIconSpecialpack} 
+                                    textLink={t.specialpack} />
+                        <NavbarItem styles={styles} 
+                                    path='/info' 
+                                    isOpen={isOpen}
+                                    openMenu={openMenu} 
+                                    styleIcon={styleIconInfo} 
+                                    textLink={t.info} />
+                        {displayLogin === 'true' ? 
+                            <>
+                                <NavbarItem styles={styles} 
+                                        path='/login' 
+                                        isOpen={isOpen}
+                                        openMenu={openMenu} 
+                                        styleIcon={styleIconLogin} 
+                                        textLink={t.login} />
+                            </>
+                        : null    
+                        }
+                        
+                        { getLocale(useRouter()) === 'en' ?
+                            <NavbarImage styles={styles}
+                                        path='#'
+                                        locale='es'
+                                        isOpen={isOpen}
+                                        openMenu={openMenu}
+                                        image='/es.png'
+                                        altText={t.spanish}
+                                        text={textChange} />
+                            :  
+                            <NavbarImage styles={styles}
+                                        path='#'
+                                        locale='en'
+                                        isOpen={isOpen}
+                                        openMenu={openMenu}
+                                        image='/gb.png'
+                                        altText={t.english}
+                                        text={textChange} />                   
+                        }
+                        { isOpen === true && (
+                            <>
+                            <NavbarItem styles={styles} 
+                                    path='#'
+                                    isOpen={isOpen}
+                                    openMenu={callPhone} 
+                                    styleIcon={styleIconPhone} 
+                                    textLink={t.callus} />
+                            </>
+                        )}
+                    </ul>
+                    <NavbarButtonHamburger styles={styles} 
+                                           isOpen={isOpen}
+                                           openMenu={openMenu}
+                                           label={t.menu} />
+                </nav>
+            </header>
+        {children}
+        <div className={styles.container}>
+            <Whatsapp />
+        </div>
+        <footer className={styles.footerApp}> 
+            <Youtube />
+            <X />
+            <Facebook />
+            <Instagram />
+        </footer>
+     </>
+}
