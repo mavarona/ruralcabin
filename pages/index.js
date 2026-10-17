@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react'
 import styles from '@styles/Home.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 import InfoList from '@components/info/infolist'
 
@@ -76,6 +77,31 @@ export default function Home({home}) {
 
   return (
     <main className={styles.container}>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'LodgingBusiness',
+            name: 'Cabañas Mirador de Ézaro',
+            description: 'Alojamiento rural a 1 km del Mirador de Ézaro y su cascada, a los pies del Monte Pindo.',
+            url: 'https://www.cabanasmiradordeezaro.es',
+            image: 'https://www.cabanasmiradordeezaro.es/cabinmain.jpeg',
+            telephone: '+34620419157',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Mazaricos',
+              addressRegion: 'A Coruña',
+              addressCountry: 'ES'
+            },
+            amenityFeature: [
+              { '@type': 'LocationFeatureSpecification', name: 'Jacuzzi privado', value: true },
+              { '@type': 'LocationFeatureSpecification', name: 'WiFi', value: true },
+              { '@type': 'LocationFeatureSpecification', name: 'Desayuno', value: true }
+            ]
+          }) }}
+        />
+      </Head>
       <section className={styles.hero}>
         <div className={styles.heroCopy}>
           <h1 className={styles.heroTitle}>{t.home_title}</h1>
@@ -87,7 +113,7 @@ export default function Home({home}) {
           </div>
         </div>
         <div className={styles.heroPhoto}>
-          <Image src='/cabinmain.jpeg' alt={t.home_title} layout='fill' objectFit='cover'
+          <Image src='/cabinmain.jpeg' alt={t.home_image_alt || t.home_title} layout='fill' objectFit='cover'
                  sizes='(max-width: 1023px) 100vw, 60vw' priority />
         </div>
       </section>
@@ -110,7 +136,7 @@ export default function Home({home}) {
         <InfoList info={home} styles={styles} message={messageList} />
       </div>
       <section className={styles.homeContact}>
-        <h2>{t.info}</h2>
+        <h2>{t.home_info_title || t.info}</h2>
         <p>{t.infogeneral4}</p>
         <div className={styles.heroActions}>
           <Link href='/info'><a className={styles.primaryButton}>{t.info}</a></Link>
